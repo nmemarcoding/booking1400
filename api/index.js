@@ -8,6 +8,7 @@ import hotels from "./routes/hotels.js"
 import rooms from "./routes/rooms.js"
 dotenv.config;
 
+app.use(express.json())
 app.use("/api/auth", auth);
 app.use("/api/users", users);
 app.use("/api/hotels", hotels);
