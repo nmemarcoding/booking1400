@@ -38,4 +38,15 @@ router.delete("/:id", async(req, res) => {
     }
 })
 
+// Get
+router.get("/:id", async(req, res) => {
+
+    try {
+        const hotel = await Hotel.findById(req.params.id)
+        res.status(200).json(hotel)
+    } catch (err) {
+        res.status(500).json
+    }
+})
+
 export default router
