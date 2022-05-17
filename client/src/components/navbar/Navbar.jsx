@@ -4,17 +4,24 @@ import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 const Navbar = () => {
   const { user } = useContext(AuthContext);
+  const handelClick = () => {
+    localStorage.removeItem('user');
+    window.location.reload();
 
+  }
   return (
     <div className="navbar">
       <div className="navContainer">
         <Link to="/" style={{ color: "inherit", textDecoration: "none" }}>
-          <span className="logo">lamabooking</span>
+          <span className="logo">Bookin1400</span>
         </Link>
-        {user ? user.username : (
+        {user ? <button className="navButton" onClick={handelClick}>Log Out {user.username}</button> : (
           <div className="navItems">
             <button className="navButton">Register</button>
-            <button className="navButton">Login</button>
+            <Link to="/login" style={{ color: "inherit", textDecoration: "none" }}>
+              <button className="navButton">Login</button>
+            </Link>
+
           </div>
         )}
       </div>
