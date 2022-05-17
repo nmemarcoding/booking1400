@@ -14,7 +14,7 @@
 ## Test 
 * The project does not have any automated tests at the moment. Please feel free to contribute and provide them!
 ## Usage
-Deployed [Link](https://booking1400-d2dae.firebaseapp.com)
+Deployed [Link](booking1400-d2dae.web.app)
 
 
 <img width="1189" alt="Screen Shot 2022-05-17 at 10 43 56 AM" src="https://user-images.githubusercontent.com/94582549/168878591-8f7bd3d7-2b7a-4ecf-9bec-bcdbda27dac8.png">
