@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import './Register.css'
 export default function Register() {
     const [credentials, setCredentials] = useState({
@@ -10,13 +11,23 @@ export default function Register() {
         city: undefined,
         phone: undefined
       });
-   
+      const navigate = useNavigate()
         const handleChange = (e) => {
             setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }));
           };
+
     
     const handleClick = ()=>{
-        axios.post("https://booking1400.herokuapp.com/api/auth/register", credentials);
+        try{
+
+            const res = axios.post("https://booking1400.herokuapp.com/api/auth/register", credentials)
+            console.log(res);
+            navigate("/login")
+        }catch(e){
+            console.log(e);
+        }
+        
+
     }
     return (
         <div className="register">
