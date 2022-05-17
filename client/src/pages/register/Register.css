@@ -1,0 +1,17 @@
+.register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40vh
+}
+
+.rContair {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.rInput {
+    margin-bottom: 10px;
+    height: 40px
+}
